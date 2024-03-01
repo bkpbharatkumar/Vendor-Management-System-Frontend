@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <style>
+    body {
+      background-image: url('bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* navbar */
+    .header-container {
+      display: flex;
+      background-color: transparent;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .header-heading {
+      font-size: 30px;
+      color: black;
+      text-decoration: underline;
+      padding: 15px;
+    }
+
+    .header-logo {
+      float: right;
+      border-radius: 50px;
+      height: fit-content;
+      height: 50px;
+      width: 50px;
+      display: flex;
+    }
+
+    /* form */
+    form {
+      padding: 20px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-body-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    label {
+      width: auto;
+      margin-bottom: 8px;
+      padding: 25px;
+    }
+
+    .in {
+      width: 30vmax;
+      padding: 8px;
+      margin-bottom: 40px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.382);
+      background-color: transparent;
+    }
+
+    input[type="file"] {
+      cursor: pointer;
+    }
+
+    /* bottom-container */
+    .bottom-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bottom-container > * {
+      margin: 10px auto;
+    }
+
+    button {
+      background-color: #2650e6;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: #2650e6;
+    }
+
+    @media only screen and (max-width: 800px) {
+      .in {
+        width: 100%;
+      }
+      .header-logo{
+        display: none;
+      }
+      body {
+    background-image: none;
+    background: rgb(85,25,83);
+    background: linear-gradient(0deg, rgba(85,25,83,1) 0%, rgba(187,55,164,0.1293767507002801) 100%);
+  }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="logo.png" alt="Logo" class="header-logo">
+  <header>
+    <div class="header-container">
+      <label class="header-heading">Registration</label>
+    </div>
+  </header>
+
+  <form>
+    <div class="main-body-container">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input class="in" type="text" id="firstName" name="firstName" placeholder="Enter Your Name" required>
+        <label for="lastName">Last Name:</label>
+        <input class="in" type="text" id="lastName" name="lastName" placeholder="Enter Your Surname" required>
+      </div>
+
+      <div>
+        <label for="email">Email ID:</label>
+        <input class="in" type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        <label for="contactNo">Contact No.:</label>
+        <input class="in" type="tel" id="contactNo" name="contactNo" placeholder="Enter Contact Number" required>
+      </div>
+
+      <div>
+        <label for="address">Address:</label>
+        <input class="in" type="text" id="address" name="address" placeholder="Enter Your address" required>
+        <label for="city">City:</label>
+        <input class="in" type="text" id="city" name="city" placeholder="Enter Your City" required>
+      </div>
+
+      <div>
+        <label for="state">State:</label>
+        <input class="in" type="text" id="state" name="state" placeholder="Enter Your State" required>
+        <label for="pinCode">PIN Code:</label>
+        <input class="in" type="text" id="pinCode" name="pinCode" placeholder="Pincode" required>
+      </div>
+
+      <div>
+        <label for="organization">Organization:</label>
+        <input class="in" type="text" id="organization" name="organization" placeholder="Enter Organization's Name" required>
+        <label for="CINNo">CIN No.:</label>
+        <input class="in" type="text" id="CINNo" name="CINNo" placeholder="Enter CIN Number" required>
+      </div>
+
+      <div>
+        <label for="GSTNo">GST No.:</label>
+        <input class="in" type="text" id="GSTNo" name="GSTNo" placeholder="Enter GST Number" required>
+        <label for="PANNO">PAN No.:</label>
+        <input class="in" type="text" id="PANNo" name="PANNo" placeholder="Enter PAN Number" required>
+      </div>
+    </div>
+
+    <!-- Document -->
+    <div class="bottom-container">
+      <h3>Add Document for KYC Verification:</h3>
+      <div>
+        <input type="radio" id="PANCard" name="Doc" value="PANCard">
+        <label for="PANCard">PAN Card.</label><br>
+        <input type="radio" id="AadharCard" name="Doc" value="AadharCard">
+        <label for="AadharCard">Aadhar Card</label><br>
+        <input type="file" id="kycDocument" name="kycDocument" accept=".pdf, .doc, .docx" required>
+      </div>
+    </div>
+    <div><button type="submit">Submit Request</button></div>
+  </form>
+</body>
+
+</html>

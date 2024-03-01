@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative; /* Add relative positioning to the body */
+        }
+        .btn{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Style for the logo */
+        #logo {
+            position: absolute; /* Position absolutely */
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            border-radius: 50%; /* Makes it a circle */
+            height: 50px; /* Adjust the size as needed */
+            width: auto; /* Ensures responsiveness */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        #login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        #login-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #login-form .low input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        #user-type {
+            margin-bottom: 15px;
+        }
+
+        #login-button,
+        #register-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        @media screen  and (max-width: 800px)  {
+            body{
+                background-color: rgb(214, 183, 212);
+                background-image: none;
+            }
+            #logo {
+                top: 25%; /* Adjust as needed */
+                left: 50%; /* Align to the center */
+                transform: translateX(-50%); /* Center horizontally */
+            }
+            
+        }
+
+    </style>
+    <title>Login Page</title>
+</head>
+<body>  
+    <!-- Added id to the logo -->
+    <img src="logo.png" alt="Logo" id="logo">
+    <div id="login-container">
+       <form id="login-form">
+            <div id="user-type">
+
+                <div> <input type="radio" id="vendor" name="userType" value="vendor" checked>
+                <label for="vendor">Vendor</label>
+             <input type="radio" id="admin" name="userType" value="admin">
+                <label for="admin">Admin</label></div>
+
+            </div>
+            <div class="low">
+                         <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+
+            <button id="login-button" onclick="submitForm()">Login</button>
+            <button id="register-button"><a href="r_p.html" class="btn">Register</a></button>  
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Add your logic for handling the form data
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const userType = document.querySelector('input[name="userType"]:checked').value;
+
+            console.log(`Email: ${email}, Password: ${password}, UserType: ${userType}`);
+        }
+
+        // function register() {
+        //     // Add your logic for registration
+        //     alert('Registration functionality not implemented in this example.');
+        // }
+    </script>
+</body>
+</html>
