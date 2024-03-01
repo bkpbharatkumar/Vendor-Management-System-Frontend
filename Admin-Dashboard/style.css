@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+  }
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #A381C4;
+    height: 60px;
+    align-items: center;
+    box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo > .logoLink > .logoImage {
+  height: 45px;
+    border-radius: 100%;
+    position: relative;
+    left: 20%;
+}
+
+
+/* Search Bar */
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  
+  
+  input[type="text"] {
+    width: 85%;
+    padding: 10px 12px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+  }
+  
+  
+  button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    input[type="text"] {
+      width: 60%;
+    }
+  }
+  
+
+/* Admin and dropdown */
+
+.dropdown {
+    position: relative;
+    right: 1%;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #125174;
+    color: white;
+    padding: 10px 27px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #125174;
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #A381C4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #003F62;
+}
+
+.dropdown > .dropbtn > i {
+    padding-left: 5px;
+}
+
+.dropdown > .dropbtn > .adminProfile {
+    display: none; 
+}
+
+/* Side Bar */
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 20;
+  left: 0;
+  background-color: #A381C4;
+  padding-top: 20px;
+  transition: left 0.3s;
+  box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.hidden {
+  left: -250px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  display: flex;
+  transition: 0.3s;
+}
+
+aside > li:hover {
+    background-color: #003F62;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  color: white;
+  font-size: 25px;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+aside > li > a > i {
+    padding-right: 15px;
+}
+
+aside > li {
+    padding: 10px 0px 10px 0
+}
+
+@media screen and (max-width: 768px) {
+  
+  .sidebar {
+    width: 250px;
+    left: -250px;
+  }
+  .sidebar.hidden {
+    left: 0;
+  }
+  .sidebar a {
+    text-align: center;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .logo>.logoLink>.logoImage {
+    /* display: none; */
+    margin-left: 50px;
+    height: 40px;
+  }
+
+
+}
+
+@media screen and (max-width: 405px) {
+    
+    .dropdown {
+        position: relative;
+        right: 1%;
+    }
+    
+    .dropbtn {
+        padding: 10px 27px;
+        display: flex;
+    }
+    
+    .dropdown-content {
+        min-width: 113px;
+    }
+    
+    .dropdown-content a {
+        padding: 10px 15px;
+    }
+}
+
+
+
+/* Main Contain */
+
+.main-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
+  /* border: 2px solid rgb(24, 24, 21); */
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+#box1 {
+  background-color: white;
+  font-size: 3.5rem;
+  color: red;
+}
+
+#box2 {
+  background-color: grey;
+  font-size: 3.5rem;
+  color: red;
+}
+
+#box3 {
+  background-color: black;
+  font-size: 3.5rem;
+  color: red;
+}
+
+.dash-List {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+  margin: 0px 55px 0px 55px;
+}
+
+
+/* Default styles */
+#table {
+  margin: 21px 23px 0 275px;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  #table {
+      margin: 10px; /* Adjust margin for smaller screens */
+  }
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 25px;
+
+}
+}
+
+/* Media query for screens larger than 1023px */
+@media screen and (min-width: 1022px) {
+  #table {
+      margin: 21px 23px 0 275px; /* Keep the default margin for larger screens */
+  }
+}
+
+.listItems {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 25px;
+
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #A381C4;
+  color: #fff;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media only screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+  tr { border: 1px solid #ccc; }
+  td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+  }
+  td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-column);
+      font-weight: bold;
+  }
+} 

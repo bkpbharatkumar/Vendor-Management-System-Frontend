@@ -1,0 +1,169 @@
+#addVendorBtn {
+    background-color: #cfcece;
+    color: black;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+.add-remove {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(207, 206, 206);
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin: 15px 0px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    /* border-radius: 25px; */
+    
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 4% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 2px grey;
+    height: 85%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#vendorForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
+.form-group {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.labelWidth {
+    width: 250px;
+}
+
+.mandatory {
+    color: red;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    /* margin-bottom: 5px; */
+}
+
+.form-group > input[type="text"],
+.form-group > input[type="email"],
+.form-group > input[type="tel"],
+.form-group > textarea {
+    width: 85%;
+    padding: 8px 10px;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid grey;
+}
+
+.registerBtn {
+    padding: 10px 20px;
+    margin: 12px auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.form-group > button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 769px) {
+    .popup-content {
+        background-color: #fefefe;
+        margin: 4% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px 2px grey;
+        height: 70%;
+    }
+}
+
+
+@media screen and (min-width: 340px) and (max-width: 768px) {
+
+    .popup-content {
+        background-color: #fefefe;
+        margin: 4% auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 95%;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px 2px grey;
+        height: 80%;
+    }
+
+    
+.form-group > input[type="text"],
+.form-group > input[type="email"],
+.form-group > input[type="tel"],
+.form-group > textarea {
+        width: 95%;
+        padding: 3px 10px;
+        border-radius: 5px;
+        outline: none;
+        /* border: 2px solid grey; */
+    }
+
+    .registerBtn {
+        padding: 10px 12px;
+        margin: 12px auto;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 25%;
+    }
+}
+

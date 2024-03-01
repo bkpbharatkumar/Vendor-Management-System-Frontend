@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Grey List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- header or nav -->
+        <nav class="header">
+            <div class="logo"><a class="logoLink" href="Admin_Dashboard.html"><img src="logo.png" alt="QuantaRock" class="logoImage"></a>
+            </div>
+                <div class="dropdown"><button class="dropbtn"> Admin <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content"><a href="login_page.html">Logout</a></div>
+                </div>
+            </div>
+        </nav>
+        <div class="hamburger" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <aside class="sidebar">
+            <li><a href="Admin_Dashboard.html"><i class="fa-solid fa-gauge"></i>DASHBOARD</a></li>
+            <li><a href="Admin_New_Request.html"><i class="fa-solid fa-plus"></i>NEW REQUEST</a></li>
+            <li><a href="Admin_Vendor_list.html"><i class="fa-solid fa-user-plus"></i>VENDORS LIST</a></li>
+            <li><a href="Admin_KYC.html"><i class="fa-solid fa-handshake"></i>KYC DETAILS</a></li>
+            <li><a href="Admin_Messege.html"><i class="fa-solid fa-message"></i>MESSAGES</a></li>
+            <li><a href="Admin_PRODUCT_LIST.HTML"><i class="fa-solid fa-store"></i>PRODUCTS</a></li>
+        </aside>
+
+        <!-- Your main content here -->
+        <div id="table">
+            <div class="listItems"><h3>Grey List</h3><i class="fa-solid fa-list"></i></div>
+            <table>
+                <thead class="thead">
+                    <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ADDRESS</th>
+                    <th>JOINING DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-column="ID">00001</td>
+                    <td data-column="NAME">Bharat Parihar</td>
+                    <td data-column="ADDRESS">089 rajendra nagar indore</td>
+                    <td data-column="JOINING DATE">04 Sep 2022</td>
+                </tr>
+                <tr>
+                    <td data-column="ID">00001</td>
+                    <td data-column="NAME">Bharat Parihar</td>
+                    <td data-column="ADDRESS">089 rajendra nagar indore</td>
+                    <td data-column="JOINING DATE">04 Sep 2022</td>
+                </tr>
+                <tr>
+                    <td data-column="ID">00001</td>
+                    <td data-column="NAME">Bharat Parihar</td>
+                    <td data-column="ADDRESS">089 rajendra nagar indore</td>
+                    <td data-column="JOINING DATE">04 Sep 2022</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
